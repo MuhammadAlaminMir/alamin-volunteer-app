@@ -3,18 +3,16 @@ import { useContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { UserContext } from '../../App';
-// import { getDatabaseCart } from '../BrowserStorage/Storage';
-// import fakeData from '../fakeData/fakeData';
+
 import Header from '../Header/Header';
 import './style.css';
 const UserEvents = () => {
-    // const [allData, setAllData] = useState([]);
     const [selectedEvents, setSelectedEvents] = useState([]);
     const [loggedInUser] = useContext(UserContext);
 
     useEffect(() => {
         setTimeout(() => {
-            fetch('http://localhost:5000/eventByEmail', {
+            fetch('https://alamin-volunteer-app.herokuapp.com/eventByEmail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,14 +23,11 @@ const UserEvents = () => {
             })
                 .then((res) => res.json())
                 .then((data) => setSelectedEvents(data));
-        }, 1000);
-    }, [loggedInUser]);
+        }, 2000);
+    }, [loggedInUser.email]);
 
-    // let history = useHistory();
-    // let { from } = { from: { pathname: '/events' } };
     const removeEvent = (id, email) => {
-        console.log(id, email);
-        fetch('http://localhost:5000/removeEvent', {
+        fetch('https://alamin-volunteer-app.herokuapp.com/removeEvent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

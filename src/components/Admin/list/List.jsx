@@ -3,13 +3,12 @@ import './list.css';
 const List = (props) => {
     const removeEvent = props.removeEvent;
     const { _id, name, email, date, eventName } = props.volunteer;
-    // console.log(name, email, date, eventName);
     return (
         <div className="list-style">
-            <p>{name}</p>
-            <p>{email}</p>
-            <p>{date}</p>
-            <p>{eventName}</p>
+            <p className="p">{name}</p>
+            <p className="p">{email}</p>
+            <p className="p">{date}</p>
+            <p className="p">{eventName}</p>
             <p
                 onClick={() => removeEvent(_id, email)}
                 style={{

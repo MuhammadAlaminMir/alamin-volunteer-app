@@ -5,15 +5,15 @@ import './Admin.css';
 import List from './list/List';
 const Admin = () => {
     const [allVolunteers, setAllVolunteers] = useState([]);
-    const [addEvent, setAddEvent] = useState(true);
+    const [addEvent, setAddEvent] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:5000/allVolunteers')
+        fetch('https://alamin-volunteer-app.herokuapp.com/allVolunteers')
             .then((res) => res.json())
             .then((data) => setAllVolunteers(data));
     }, []);
 
     const removeEvent = (id, email) => {
-        fetch('http://localhost:5000/removeEvent', {
+        fetch('https://alamin-volunteer-app.herokuapp.com/removeEvent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

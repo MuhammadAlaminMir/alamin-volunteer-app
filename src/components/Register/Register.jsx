@@ -1,37 +1,36 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
+
 import fakeData from '../fakeData/fakeData';
 import './Register.css';
 const Register = () => {
     const params = useParams();
-    const [loggedInUser] = useContext(UserContext);
     const eventId = parseInt(params.id);
     const [allData, setAllData] = useState([]);
     const [registeredUser, setRegisteredUser] = useState({});
-    // console.log(eventId);
+    const [loggedInUser] = useContext(UserContext);
     useEffect(() => {
         let data = fakeData;
         setAllData(data);
     }, []);
     const userEvent = allData.find((event) => event.id === eventId);
-    // console.log(eventId);
+
     const handleBlur = (e) => {
-        // console.log(userEvent);
         const userDetails = { ...registeredUser };
         userDetails[e.target.name] = e.target.value;
         userDetails.picture = userEvent.picture;
         userDetails.eventName = userEvent.name;
+        userDetails.name = loggedInUser.name;
+        userDetails.email = loggedInUser.email;
 
-        // console.log(userDetails);
         setRegisteredUser(userDetails);
-        // console.log(registeredUser);
     };
-    // console.log(registeredUser);
+
     let history = useHistory();
     let { from } = { from: { pathname: '/events' } };
     const handleSubmit = (e) => {
-        fetch('http://localhost:5000/addVolunteer', {
+        fetch('https://alamin-volunteer-app.herokuapp.com/addVolunteer', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

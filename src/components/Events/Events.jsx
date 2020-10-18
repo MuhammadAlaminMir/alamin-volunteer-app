@@ -17,7 +17,6 @@ const Events = () => {
         const currentEvent = getDatabaseCart();
         currentEvent[name] = id;
         localStorage.setItem(getDataKey(), JSON.stringify(currentEvent));
-        // console.log(Object.values(currentCart));
     };
     return (
         <div className="container">

@@ -31,7 +31,6 @@ const LogIn = () => {
                 console.log(error.massage);
             });
     };
-    // console.log(loggedInUser);
     return (
         <div id="login" className="d-flex justify-content-center ">
             <div className="image">
