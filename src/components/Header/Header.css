@@ -1,0 +1,10 @@
+.link {
+    padding: 5px;
+    color: inherit;
+    margin: 10px;
+    font-weight: 700;
+}
+.link:hover {
+    color: inherit;
+    text-decoration: none;
+}

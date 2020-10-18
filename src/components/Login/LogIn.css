@@ -1,0 +1,51 @@
+#login {
+    background: #e5e5e5;
+    height: 120vh;
+    position: relative;
+}
+.image {
+    position: relative;
+    top: 40px;
+}
+.googleLogin {
+    position: absolute;
+    width: 50%;
+    height: 357px;
+    top: 171px;
+    background: #ffffff;
+    border: 1px solid #ababab;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.gLogin {
+    margin-top: 100px;
+}
+
+.newOrExiting {
+    color: 'blue';
+    cursor: 'pointer';
+}
+.style {
+    border: 1px solid black;
+    width: 60%;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .style {
+        width: 100%;
+    }
+    .googleLogin {
+        width: 100%;
+        height: 300px;
+    }
+    .gLogin {
+        margin-top: 50px;
+    }
+    .register {
+        width: 100%;
+        height: 180vh;
+    }
+}

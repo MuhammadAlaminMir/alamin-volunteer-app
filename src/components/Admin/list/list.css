@@ -1,0 +1,14 @@
+.list-style {
+    position: relative;
+    width: 90%;
+    height: 8vh;
+    top: 35px;
+    margin: 10px;
+    left: 50px;
+
+    border-radius: 13px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}

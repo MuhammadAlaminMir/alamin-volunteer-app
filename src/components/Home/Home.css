@@ -1,0 +1,24 @@
+#header {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+#header::before {
+    content: '';
+    position: absolute;
+    height: 496px;
+    background: url(./background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.2;
+}
+@media only screen and (max-width: 350px) {
+    #textarea > button {
+        margin-top: 15px;
+    }
+}

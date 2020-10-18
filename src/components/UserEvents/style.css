@@ -1,0 +1,30 @@
+#UserEvents {
+    background: #e5e5e5;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    /* min-height: 100vh; */
+    max-height: auto;
+
+    /* min-height: 30px; */
+}
+.eventStyle {
+    background: inherit;
+    width: 500px;
+    height: auto;
+    position: relative;
+    top: 200px;
+}
+.events {
+    position: relative;
+    width: 40%;
+    height: 219px;
+    left: 40px;
+    top: 20px;
+    margin: 20px;
+    float: left;
+
+    background: #ffffff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}

@@ -1,0 +1,13 @@
+.list-header {
+    position: relative;
+    width: 90%;
+    height: 7vh;
+    top: 20px;
+    left: 50px;
+    background: #f5f6fa;
+    border-radius: 13px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}

@@ -1,0 +1,30 @@
+.register {
+    position: absolute;
+    width: 50%;
+    height: 80vh;
+    top: 130px;
+    background: #ffffff;
+    border: 1px solid #ababab;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.registration > input {
+    margin-bottom: 50px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.registration > input:focus {
+    outline: none;
+}
+.registration > button {
+    width: 100%;
+}
+@media only screen and (max-width: 700px) {
+    .register {
+        width: 100%;
+    }
+    .registration > input {
+        width: 100%;
+    }
+}
